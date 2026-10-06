@@ -1,0 +1,265 @@
+﻿/*=============================*/
+/* - Reset & Global Settings - */
+/*=============================*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e8f5e9; /* استخدم لون الخلفية المطلوب */
+    font-family: 'Tajawal', Arial, sans-serif; /* دمج الخط مع الخط الأساسي */
+    line-height: 1.6;
+    color: #343a40;
+}
+
+/*=============================*/
+/*   تأثيرات التركيز للعناصر   */
+/*=============================*/
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem #fff, 0 0 0 0.25rem #26a69a; /* تأثير التركيز باللون الأخضر */
+}
+
+/*=============================*/
+/*     تنسيق الأزرار العامة     */
+/*=============================*/
+.btn,
+.btn-custom {
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+    .btn:hover,
+    .btn-custom:hover {
+        transform: scale(1.05);
+        filter: brightness(90%);
+    }
+
+/*-----------------------------*/
+/* ألوان أزرار الـ Outline      */
+/*-----------------------------*/
+.btn-outline-success {
+    border: 1px solid #26a69a;
+    color: #26a69a;
+}
+
+    .btn-outline-success:hover {
+        background-color: #26a69a;
+        color: #fff;
+    }
+
+/* يمكنك تعديل ألوان الأزرار الأخرى حسب الحاجة أو إبقاؤها كما هي */
+
+/*-----------------------------*/
+/*    ألوان الأزرار الأساسية    */
+/*-----------------------------*/
+.btn-primary {
+    background-color: #26a69a;
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #1de9b6;
+    }
+
+/* الأزرار الأخرى (يمكن تركها أو تعديلها حسب ذوقك) */
+.btn-success {
+    background-color: #28a745;
+    border: 1px solid #28a745;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    color: #fff;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: 1px solid #ffc107;
+    color: #000;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border: 1px solid #17a2b8;
+    color: #fff;
+}
+
+/*-----------------------------*/
+/*         زر الطباعة         */
+/*-----------------------------*/
+.print-btn {
+    display: block;
+    margin: 15px auto 0;
+    padding: 10px 20px;
+    background-color: #26a69a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+    .print-btn:hover {
+        background-color: #1de9b6;
+        transform: scale(1.05);
+    }
+
+/*=============================*/
+/*   تنسيق العناوين والنصوص     */
+/*=============================*/
+h2, h3, h4, h5, h6 {
+    color: #343a40;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+i {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+/*=============================*/
+/*       تنسيق الجداول          */
+/*=============================*/
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+    .table th {
+        background-color: #26a69a; /* لون رأس الجدول */
+        color: #fff;
+        padding: 0.75rem;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid #dee2e6;
+        text-shadow: none;
+    }
+
+    .table td {
+        padding: 0.75rem;
+        text-align: center;
+        border: 1px solid #dee2e6;
+    }
+
+.table-hover tbody tr:hover {
+    background-color: #d0f0ea; /* لون خلفية خفيف عند المرور */
+    transition: background-color 0.3s ease;
+}
+
+/*=============================*/
+/*    تنسيق التنبيهات (Alerts)   */
+/*=============================*/
+.alert {
+    font-size: 1.125rem;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.alert-warning {
+    background-color: #ffeeba;
+    color: #856404;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/*=============================*/
+/*    كروت العرض (Cards)         */
+/*=============================*/
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* خلفية بيضاء */
+}
+
+.card-header {
+    background: linear-gradient(to right, #26a69a, #1de9b6);
+    color: white;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px;
+}
+
+    .card-header h4 {
+        margin: 0;
+        font-weight: 600;
+    }
+
+/*=============================*/
+/*   تنسيق النماذج والنصوص      */
+/*=============================*/
+.form-floating > .form-control:focus ~ label {
+    color: #26a69a;
+}
+
+a {
+    color: #26a69a;
+    text-decoration: none;
+}
+
+
+/*=============================*/
+/*   صفحات إدارة الحساب (اختياري)  */
+/*=============================*/
+.account-manage {
+    font-family: 'Tajawal', sans-serif;
+    color: #343a40;
+}
+
+    .account-manage .btn-primary {
+        background-color: #26a69a;
+        border: none;
+    }
+
+        .account-manage .btn-primary:hover {
+            background-color: #1de9b6;
+        }
+
+ul.nav-pills .nav-item a {
+    color: #1de9b6 !important;
+
+}
+
+    ul.nav-pills .nav-item a.active {
+        background-color: #1de9b6;
+        color: #fff !important;
+    }
+    main, ul.nav-pills .nav-item a {
+        background-color: #f8f9fa; /* لون خلفية الصفحة الرئيسية */
+    }
